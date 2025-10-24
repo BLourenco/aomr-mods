@@ -1,0 +1,11 @@
+// Egyptian Techs
+
+// Egyptian Minor Gods
+ID = "STR_TECH_SOBEK_NAME"   ;   Str = "Sobek"
+ID = "STR_TECH_HATHOR_NAME"   ;   Str = "Sobek"
+ID = "STR_TECH_SOBEK_SELF"   ;   Str = "You have advanced to the Heroic Age through the strength of Sobek!"
+ID = "STR_TECH_SOBEK_OTHER"   ;   Str = "{0} advances to the Heroic Age through the strength of Sobek"
+
+// History Links
+ID = "STR_HISTORY_LINK_SOBEK"   ;   Str = "Sobek"
+ID = "STR_HISTORY_LINK_HATHOR"   ;   Str = "Sobek"

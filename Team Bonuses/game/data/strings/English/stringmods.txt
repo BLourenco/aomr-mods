@@ -1,0 +1,157 @@
+// Team Bonus activated messages
+
+ID = "STR_TEAM_BONUS_ZEUS"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(greek/static_color/major_gods/zeus_icon_round.png)\"> Zeus grants your Infantry +60% bonus damage against buildings!"
+ID = "STR_TEAM_BONUS_HADES"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(greek/static_color/major_gods/hades_icon_round.png)\"> Hades grants your Ranged Soldiers and Heroes +1 Range and Line of Sight!"
+ID = "STR_TEAM_BONUS_POSEIDON"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(greek/static_color/major_gods/poseidon_icon_round.png)\"> Poseidon grants your Cavalry, Caravans, and Myth Units +0.1 Speed per Age!"
+ID = "STR_TEAM_BONUS_RA"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(egyptian/static_color/major_gods/ra_icon_round.png)\"> Ra helps your workers gather from Berry Bushes 25% faster!"
+ID = "STR_TEAM_BONUS_ISIS"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(egyptian/static_color/major_gods/isis_icon_round.png)\"> Isis grants your Town Centers support for an additional 5 population!"
+ID = "STR_TEAM_BONUS_SET"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(egyptian/static_color/major_gods/set_icon_round.png)\"> Set makes your military production and Fortress-type buildings cost 25% less Wood and Gold!"
+ID = "STR_TEAM_BONUS_THOR"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(norse/static_color/major_gods/thor_icon_round.png)\"> Thor will grant you a Dwarf for each Armory technology you research!"
+ID = "STR_TEAM_BONUS_ODIN"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(norse/static_color/major_gods/odin_icon_round.png)\"> Odin grants your Heroes the ability to regenerate 0.4 Hit Points per second!"
+ID = "STR_TEAM_BONUS_LOKI"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(norse/static_color/major_gods/loki_icon_round.png)\"> Loki grants your Human Soldiers and Heroes +10% counter damage!"
+ID = "STR_TEAM_BONUS_FREYR"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(norse_freyr/static_color/major_gods/freyr_icon_round.png)\"> Freyr allows your buildings to be repaired for free!"
+ID = "STR_TEAM_BONUS_KRONOS"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(atlantean/static_color/major_gods/kronos_icon_round.png)\"> Kronos will return 20% of the resource cost of lost Siege Weapons and Myth Units!"
+ID = "STR_TEAM_BONUS_ORANOS"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(atlantean/static_color/major_gods/oranos_icon_round.png)\"> Oranos grants all your units +4 Line of Sight!"
+ID = "STR_TEAM_BONUS_GAIA"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(atlantean/static_color/major_gods/gaia_icon_round.png)\"> Gaia makes your generic economic technologies 35% cheaper!"
+ID = "STR_TEAM_BONUS_FUXI"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(chinese/static_color/major_gods/fuxi_icon_round.png)\"> Fuxi increases your buildings' base research rate by 60%!"
+ID = "STR_TEAM_BONUS_NUWA"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(chinese/static_color/major_gods/nuwa_icon_round.png)\"> Nüwa grants your Cavalry +10% Hit Points!"
+ID = "STR_TEAM_BONUS_SHENNONG"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(chinese/static_color/major_gods/shennong_icon_round.png)\"> Shennong will grant you the Plow, Irrigation, and Flood Control technologies instantly and for free in their respective Ages!"
+ID = "STR_TEAM_BONUS_AMATERASU"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(japanese/static_color/major_gods/amaterasu_icon_round.png)\"> Amaterasu grants you a small trickle of 0.5 Gold per second!"
+ID = "STR_TEAM_BONUS_TSUKUYOMI"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(japanese/static_color/major_gods/tsukuyomi_icon_round.png)\"> Tsukuyomi will grant you a free Kitsune at your Temple each Age!"
+ID = "STR_TEAM_BONUS_SUSANOO"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(japanese/static_color/major_gods/susanoo_icon_round.png)\"> Susanoo grants your units' abilities 33% faster recharge!"
+
+// Major God bonuses list
+
+// Greek
+ID = "STR_CIV_ZEUS_LR"   ;   Str = "Focus: Infantry and Heroes.
+• Starts with ${ZEUS_STARTING_FAVOR_BONUS} Favor.
+• Gains Favor ${ZEUS_FAVOR_SPEED}% faster.
+• Myth units cost ${ZEUS_MYTH_UNIT_COST} less population.
+• Hoplites move ${ZEUS_HOPLITES_MOVEMENT_BONUS}% faster.
+• TEAM: Infantry do +${ZEUS_INFANTRY_BUILDING_DAMAGE_BONUS}% damage to buildings."
+
+ID = "STR_CIV_HADES_LR"   ;   Str = "Focus: Ranged Soldiers and Buildings.
+• ${HADES_FALLEN_SHADE_RETURN_CHANCE}% chance for fallen humans to return as Shades.
+• Myth units +${HADES_MYTH_UNIT_HP_BONUS}% hitpoints.
+• Ranged fortifications +${HADES_RANGED_FORITIFATION_RANGE_BONUS} range.
+• Ballistics and Burning Pitch are researched instantly for free in their respective ages.
+• TEAM: Ranged soldiers and heroes +${HADES_RANGED_BONUS} range and +${HADES_LOS_BONUS} LoS."
+
+ID = "STR_CIV_POSEIDON_LR"   ;   Str = "Focus: Cavalry and Economy.
+• Militia spawn from razed buildings.
+• Stables and Markets are ${POSEIDON_STABLE_MARKET_CHEAP}% cheaper.
+• Market exchange rates improved by ${POSEIDON_MARKET_RATE_IMPROVEMENT}%.
+• A free Hippocampus respawns at the first Dock.
+• TEAM: Cavalry, Caravans, and Myth Units gain +${POSEIDON_UNITS_SPEED_BONUS} speed per age."
+
+// Egyptian
+ID = "STR_CIV_RA_LR"   ;   Str = "Focus: Migdol Stronghold units and Empowerment.
+• +${RA_HP_BONUS}% Camel Rider, Chariot Archer, and War Elephant hitpoints.
+• Pharaoh-empowered Monuments empower nearby buildings (${RA_PHARAOH_EFFICIENCY}% efficiency of Pharaohs).
+• Priests can empower (${RA_PHARAOH_EFFICIENCY}% efficiency of Pharaohs).
+• TEAM: Workers gather from Berry Bushes ${RA_GATHER_BONUS}% faster."
+
+ID = "STR_CIV_ISIS_LR"   ;   Str = "Focus: Technology.
+• Monuments shield against enemy God Powers (${ISIS_MONUMENT_SHIELD_RANGE} range; ${ISIS_MONUMENT_SHIELD_RANGE_EMPOWERED} when empowered).
+• Empowered Monuments heal nearby units (${ISIS_MONUMENT_HEAL_RANGE} range) and generate Favor ${ISIS_FAVOR_GEN_SPEED}% faster.
+• Technologies cost -${ISIS_TECH_COST_REDUCTION}%.
+• Obelisks cost -${ISIS_OBELISK_COST} Gold, and are built ${ISIS_OBELISK_BUILD_SPEED}% faster.
+• TEAM: Town Centers and Citadel Centers support +${ISIS_TOWN_CENTER_POPULATION_BONUS} population."
+
+ID = "STR_CIV_SET_LR"   ;   Str = "Focus: Barracks units.
+• Pharaohs can summon Animals of Set.
+• Priests can convert wild animals, but converted animals lose ${SET_CONVERT_FOOD_LOSS}% of their Food.
+• +${SET_UNIT_SPEED_BONUS}% Spearman, Axeman, and Slinger speed.
+• Monuments reduce the cost of units in nearby Barracks and Migdol Strongholds by ${SET_BUILDING_UNIT_COST_REDUCTION}%.
+• TEAM: Military production and Fortress-like buildings cost -${SET_BUILDING_COST}% Wood and Gold."
+
+// Norse
+ID = "STR_CIV_THOR_LR"   ;   Str = "Focus: Dwarves and Armory.
+• Start with Dwarves instead of Gatherers.
+• Dwarves cost -${THOR_DWARVE_COST_REDUCTION} Gold, and gather Food and Wood nearly as fast as Gatherers.
+• Dwarven Armory can be built and research upgrades in any age.
+• Armory upgrades cost -${THOR_ARMORY_COST_REDUCTION}% less.
+• Can research ${THOR_EXTRA_DWARVEN_ARMORY_UPGRADES} extra Dwarven Armory upgrades.
+• TEAM: Receive a free Dwarf for each Armory upgrade researched."
+
+ID = "STR_CIV_ODIN_LR"   ;   Str = "Focus: Great Hall units.
+• Gatherers and Dwarves hunt ${ODIN_GATHERER_DWARVEN_HUNT_BONUS}% faster.
+• Great Hall units generate +${ODIN_GREAT_HALL_FAVOR_GENERATE}% Favor in battle.
+• ${ODIN_RAVEN_SCOUT_SPAWNS} Raven scouts spawn once the first Temple is built, and respawn a short time after being killed.
+• Human units regenerate ${ODIN_HUMAN_HERO_HP_REGEN} hitpoints/second.
+• TEAM: Heroes regenerate ${ODIN_HUMAN_HERO_HP_REGEN} hitpoints/second."
+
+ID = "STR_CIV_LOKI_LR"   ;   Str = "Focus: Myth Units.
+• Damaging enemy units can spawn myth units. (Human soldiers contribute ${LOKI_HUMAN_CONTRIBUTION}%; Hersirs ${LOKI_HERSIRS_CONTRIBUTION}% of damage dealt.)
+• Buildings are constructed ${LOKI_BUILDING_SPEED_BONUS}% faster.
+• Ox Carts are ${LOKI_OXCART_COST_REDUCTION}% cheaper.
+• Transforming Gatherers and Dwarves into Berserks is ${LOKI_BERSERK_TRANSFORM_COST_REDUCTION}% cheaper.
+• TEAM: Human soldiers and heroes +${LOKI_HUMAN_HERO_COUNTER_DAMAGE}% counter damage."
+
+ID = "STR_CIV_FREYR_LR"   ;   Str = "Focus: Technology and Defense.
+• Has a potent defensive God Power that gets more powerful with each age advancement.
+• Technologies cost -${FREYR_TECHNOLOGY_COST}% Food, Wood, and Gold, but take ${FREYR_TECHNOLOGY_RESEARCH_DURATION}% longer to research.
+• Hill Forts and Hill Fort units +${FREYR_HILL_FORTS_UNITS_DAMAGE_BONUS}% damage.
+• Gatherers and Dwarves can repair.
+• TEAM: Repairing buildings is free."
+
+// Atlantean
+ID = "STR_CIV_KRONOS_LR"   ;   Str = "Focus: Siege and Myth Units.
+• Can time-shift buildings to new locations (Towers & Palaces cost ${KRONOS_TOWER_PALACE_SHIFT_COST}% of their price to shift, others are free).
+• Buildings are constructed ${KRONOS_MANOR_CONSTRUCTION_SPEED_BONUS}% faster per nearby Manor.
+• Receive ${KRONOS_FREE_MYTH_UNIT_COUNT} free myth units instead of 1 when advancing to the next age.
+• TEAM: Lost siege and myth units return ${KRONOS_LOST_SIEGE_MYTH_UNITS_COST_RETURN}% of their resource cost."
+
+ID = "STR_CIV_ORANOS_LR"   ;   Str = "Focus: Vision and Mobility.
+• Citizens can build a new Sky Passage each age.
+• Units can enter Sky Passages to instantly teleport between them.
+• Oracles generate +${ORANOS_ORACLE_LOS_FAVOR_BONUS}% Favor at full Line of Sight.
+• Damaged enemy units remain visible for ${ORANOS_DAMAGED_UNITS_VISIBLE_DURATION} seconds.
+• TEAM: All units have +${ORANOS_UNIT_LOS_BONUS} Line of Sight."
+
+ID = "STR_CIV_GAIA_LR"   ;   Str = "Focus: Economy and Buildings.
+• Start with Hero Citizens and promoting Citizens to heroes costs -${GAIA_CITIZEN_HERO_PROMOTION_COST_REDUCTION}%.
+• Economic Buildings (Town Centers, Manors, Economic Guilds, and Markets) grow Lush.
+• Lush heals friendly units and buildings (${GAIA_LUSH_FRIENDLY_HEALING} HP/second).
+• The Economic Guild is ${GAIA_GUILD_TECHNOLOGIES_COST_REDUCTION}% cheaper, and its technologies can be researched an age earlier.
+• TEAM: Generic economic technologies are ${GAIA_GUILD_TECHNOLOGIES_COST_REDUCTION}% cheaper."
+
+// Chinese
+ID = "STR_CIV_FUXI_LR"   ;   Str = "Focus: Human Soldiers and Heroes.
+• God Blessing: Yin and Yang
+• On Favored Land: Buildings research 150% faster and Military Camp/Machine Workshop additions cost -${FUXI_ADDONS_COST_REDUCTION}%.
+• Gains access to Nezha in the Classical Age, an additional legendary hero that gets stronger each age.
+• TEAM: Base research rate of buildings is increased by 60%."
+// ${FUXI_FAVORED_LAND_RESEARCH_SPEED}
+
+ID = "STR_CIV_NUWA_LR"   ;   Str = "Focus: Peasants, Kuafus, and Defense.
+• God Blessing: Creator’s Auspice
+• On Favored Land: Foundations automatically construct.
+• Buildings spread Favored Land +${NUWA_FAVORED_LAND_SPREAD_INCREASE} range further.
+• TEAM: Cavalry +10% hitpoints."
+
+ID = "STR_CIV_SHENNONG_LR"   ;   Str = "Focus: Farming, Myth Units, and Healing.
+• God Blessing: Gift of Beasts
+• On Favored Land: Myth units recover ${SHENNONG_MYTH_UNIT_REGEN} hitpoints per second, increasing by ${SHENNONG_MYTH_UNIT_REGEN} per age.
+• Farms are available in Archaic Age, and build instantly on favored land.
+• TEAM: Plow, Irrigation, and Flood Control are researched instantly for free in their respective ages."
+
+// Japanese
+ID = "STR_CIV_AMATERASU_LR"   ;   Str = "Focus: Economy and Samurai.
+• Earns an increasing Gold trickle with each Bushidō tier.
+• Samurai and Onna-mushas earn ${AMATERASU_PASSIVE_XP_BONUS}% more XP outside of combat.
+• Shrines increase the content of nearby resources, up to ${AMATERASU_RESOURCE_INVENTORY_CAP}%.
+• Samurai and Onna-mushas regenerate hitpoints (${AMATERASU_COMBAT_REGEN_MULTIPLIER}x faster in combat).
+• TEAM: Starts the game with a Gold trickle of 0.5 per second."
+
+ID = "STR_CIV_TSUKUYOMI_LR"   ;   Str = "Focus: Technology, Shinobi, and Cavalry.
+• Increases Shinobi and Cavalry attack with each Bushidō tier.
+• Each technology researched grants Bushidō XP.
+• Advancing to the next Age is ${TSUKUYOMI_FASTER_AGE_ADVANCEMENT}% faster.
+• TEAM: A free Kitsune appears at the Temple each Age."
+
+ID = "STR_CIV_SUSANOO_LR"   ;   Str = "Focus: Myth Units and God Powers.
+• Tributes a larger Favor reward with each Bushidō tier.
+• Myth units earn Bushidō XP passively, and through combat.
+• Invoking a God Power makes others ${SUSANOO_GOD_POWER_COST_REDUCTION}% cheaper to reinvoke.
+• TEAM: Unit special abilities recharge ${SUSANOO_UNIT_RECHARGE_TIME}% faster."

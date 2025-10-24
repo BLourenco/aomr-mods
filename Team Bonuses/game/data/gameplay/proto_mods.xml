@@ -1,0 +1,60 @@
+<protomods>
+
+    <!-- Make the Dwarf count towards the build limit of each culture's worker limit. -->
+
+    <unit name="VillagerGreek">
+        <sharedbuildlimitunit>VillagerGreek</sharedbuildlimitunit>
+        <sharedbuildlimitunittypes>
+            <unittype>VillagerGreek</unittype>
+            <unittype>VillagerDwarf</unittype>
+		</sharedbuildlimitunittypes>
+        <flag mergeMode="add">UseSharedBuildLimit</flag>
+    </unit>
+    <unit name="VillagerEgyptian">
+        <sharedbuildlimitunit>VillagerEgyptian</sharedbuildlimitunit>
+        <sharedbuildlimitunittypes>
+            <unittype>VillagerEgyptian</unittype>
+            <unittype>VillagerDwarf</unittype>
+		</sharedbuildlimitunittypes>
+        <flag mergeMode="add">UseSharedBuildLimit</flag>
+    </unit>
+    <unit name="VillagerDwarf">
+        <sharedbuildlimitunittypes mergeMode="replace">
+            <unittype>VillagerGreek</unittype>
+            <unittype>VillagerEgyptian</unittype>
+			<unittype>BuildLimitSharedNorse</unittype>
+            <unittype weight="2.0">BuildLimitSharedAtlantean</unittype>
+            <unittype>VillagerChinese</unittype>
+            <unittype weight="3.0">Kuafu</unittype>
+            <unittype>VillagerJapanese</unittype>
+		</sharedbuildlimitunittypes>
+    </unit>
+    <unit name="VillagerAtlantean">
+        <sharedbuildlimitunittypes>
+            <unittype weight="0.5" mergeMode="add">VillagerDwarf</unittype>
+		</sharedbuildlimitunittypes>
+    </unit>
+    <unit name="VillagerAtlanteanHero">
+        <sharedbuildlimitunittypes>
+            <unittype weight="0.5" mergeMode="add">VillagerDwarf</unittype>
+		</sharedbuildlimitunittypes>
+    </unit>
+    <unit name="VillagerChinese">
+        <sharedbuildlimitunittypes>
+            <unittype mergeMode="add">VillagerDwarf</unittype>
+		</sharedbuildlimitunittypes>
+    </unit>
+    <unit name="Kuafu">
+        <sharedbuildlimitunittypes>
+            <unittype weight="0.3334" mergeMode="add">VillagerDwarf</unittype>
+		</sharedbuildlimitunittypes>
+    </unit>
+    <unit name="VillagerJapanese">
+        <sharedbuildlimitunit>VillagerJapanese</sharedbuildlimitunit>
+        <sharedbuildlimitunittypes>
+            <unittype>VillagerJapanese</unittype>
+            <unittype>VillagerDwarf</unittype>
+		</sharedbuildlimitunittypes>
+        <flag mergeMode="add">UseSharedBuildLimit</flag>
+    </unit>
+</protomods>

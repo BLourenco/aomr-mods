@@ -1,0 +1,49 @@
+// Egyptian Techs
+
+// Egyptian Minor Gods
+ID = "STR_TECH_SOBEK_NAME"   ;   Str = "Hathor"
+ID = "STR_TECH_HATHOR_NAME"   ;   Str = "Hathor"
+ID = "STR_TECH_SOBEK_LR"   ;   Str = "Goddess of the sky, love and fertility. Focus: buildings and camel units."
+ID = "STR_TECH_SOBEK_SELF"   ;   Str = "You have advanced to the Heroic Age through the grace of Hathor!"
+ID = "STR_TECH_SOBEK_OTHER"   ;   Str = "{0} advances to the Heroic Age through the grace of Hathor"
+
+// Egyptian God Techs
+ID = "STR_TECH_SUN_DRIED_MUD_BRICK_LR"   ;   Str = "Hathor improves the hitpoints of buildings, and lowers their cost and construction time."
+ID = "STR_TECH_CROCODILOPOLIS_LR"   ;   Str = "Hathor upgrades Petsuchoi to Petsobeks, with increased range."
+ID = "STR_TECH_DARK_WATER_LR"   ;   Str = "Hathor offers the Dark Water to your camel units, increasing their hitpoints and allowing them to regenerate."
+ID = "STR_TECH_SOLAR_BARQUE_LR"   ;   Str = "Hathor occasionally summons Sea Snakes near enemy ships that your Kebenits are attacking."
+
+// Mission 14 'Isis, hear my plea."
+
+ID = "STR_FOTT_14_SPOT_EGY_MYTH_H"   ;   Str = "Egyptians have unusual myth units with different powers than Greek ones.
+
+Hathor's Petsuchos fires a sunbeam at range, but is weak in a melee.
+
+Nephthys' Scorpion Men can poison nearby enemy units to keep taking damage.
+
+Bast's Sphinxes transform into a whirlwind when they attack and are good against units and buildings."
+
+// Mission 19 Watch That First Step
+
+ID = "STR_FOTT_19_HINT_SIEGE"   ;   Str = "Consider gathering resources from both islands. If you worship Hathor, you can use her flying Roc myth unit to transport units across obstacles."
+ID = "STR_FOTT_19_SPOT_COLOSSUS_H"   ;   Str = "The Greek Colossus is one of the game's most powerful myth units, and is good against both units and buildings. Colossi can regenerate by consuming forests or Gold Mines.
+
+The Egyptian Roc is available to worshipers of Hathor and is a flying transport that ignores conventional obstacles. Only ranged or flying units can attack Rocs."
+
+//ID = "STR_HISTORY_TECHS_CROCODILOPOLIS"   ;   Str = "The crocodile god, known as Suchos or Sobek, was said to aid fertility. The Greeks named his oasis of Fayoum (near Lake Qarun) Crocodilopolis or 'city of the crocodile', where was kept a sacred crocodile in his own private lake."
+
+ID = "STR_HISTORY_TECHS_DARKWATER"   ;   Str = "The Dark Water was the crocodile god Sobek's realm of origin, and from whence he created the Nile and all other rivers. These waters were invaluable to camels, which famously ingest and store immense amounts of water, allowing them to undertake long and grueling journeys without suffering dehydration."
+
+ID = "STR_HISTORY_TECHS_HEROICAGESOBEK"   ;   Str = "A goddess of the sky and fertility, Hathor was portrayed as a cow, a woman with the head of a cow, or as a woman with a headdress of cow's horns and a sun disk. She may have been a daughter of Ra, who relies on her in several myths. In other myths, she and Sekhmet are portrayed as the same goddess. Hathor was popular as the goddess of love, and associated with festivals of music and dance. Worship of her spread into other nearby cultures, although her name was changed."
+
+ID = "STR_HISTORY_TECHS_LOCUSTSWARM"   ;   Str = "Hathor's God Power summons a swarm of locusts that will attack enemy units and buildings. The locusts cannot be attacked, and affect Farms, livestock, and Berry Bushes the most, allowing you to strike a blow against an enemy economy.\n\nTo plague your enemies with locusts, left click on the Locust Swarm icon, then left click it to start targeting a path where you want the locusts to swarm. You must have line of sight to the area to invoke this God Power."
+ID = "STR_HISTORY_TECHS_LOCUSTSWARM_ALTFORGAMEPAD"   ;   Str = "Hathor's God Power summons a swarm of locusts that will attack enemy Villagers, Farms, Fishing Ships, and livestock. Because all of these are expensive to establish, you can strike a blow against an enemy economy. The locusts cannot be attacked, and do only minor damage to Villagers.\n\nTo plague your enemies with locusts, select the Locust Swarm icon from the God Power Menu <icon=\"(32)($TextGamepadLeftTrigger)\"> + <icon=\"(32)($TextGamepadFaceLeft)\">, then press <icon=\"(32)($TextGamepadFaceBottom)\"> near where you want the locusts to swarm. You must have line of sight to the area to invoke this God Power."
+//ID = "STR_HISTORY_TECHS_SOLARBARQUE"   ;   Str = "Ra's daily journey across the sky on the Mandjet and Mesektet was not without its dangers. At night, Ra would be attacked by the great serpent Apep, who he would have to fight off in order for the sun to rise. During later Egyptian dynasties, certain Pharaohs who hailed from cult centers of Sobek sometimes identified him with Ra for prestige reasons."
+//ID = "STR_HISTORY_UNITS_PETSUCHOS"   ;   Str = "Scientific name -- Crocodylus tyrannosuchus\nSize -- 400 lbs, 24' long\nDiet -- sunlight\n\nThe Petsuchos is a magic crocodile that can focus beams of sunlight into deadly searing rays. Like many ranged units, the Petsuchos is weak when fighting at close range, but his beams fire with perfect accuracy at a distance.\n\nPetsuchos is the Greek rendering of an Egyptian word meaning 'he who belongs to Suchos', the crocodile god also known as Sobek. The Petsuchos was the sacred crocodile of Suchos kept in a private lake in the city of Crocodopolis. He was an old, pampered beast who wore golden rings in his ears and riveted bracelets on his forelegs."
+
+// History Links
+ID = "STR_HISTORY_LINK_SOBEK"   ;   Str = "Hathor"
+ID = "STR_HISTORY_LINK_HATHOR"   ;   Str = "Hathor"
+
+// SkirmishPlus/PunchCard Blessings/Effects
+//ID = "STR_BLESS_EFF_HEALING_TEMPLES" ; Str= "Sobek's Healing Waters"

@@ -1,0 +1,1714 @@
+<techtreemods>
+
+<!-- On startup, the game will merge all modded techs into the base tech tree and create the final techtree.xml file. -->
+<!-- This file is found at C:\Users\<yourusername>\AppData\Local\Temp\Age of Mythology Retold\Data\game\data\gameplay\techtree.xml -->
+<!-- It is useful to check this file to verify changes made were correctly applied. -->
+
+<!-- TEMPLATE -->
+
+	<!--tech name="ArchaicAgeZeus">
+		<effects>
+			<effect mergeMode="remove" type="Data" action="HandAttack" amount="0.60" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+				<target type="ProtoUnit">AbstractInfantry</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusZeusActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<civilization>
+				<civName>Zeus</civName>
+			</civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusZeusEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusZeusEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_ZEUS</effect>
+			<effect type="Data" action="HandAttack" amount="0.60" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+				<target type="ProtoUnit">AbstractInfantry</target>
+			</effect>
+		</effects>
+	</tech-->
+
+<!-- ZEUS: Infantry deal 60% more damage to buildings. -->
+
+	<tech name="ArchaicAgeZeus">
+		<effects>
+			<effect mergeMode="remove" type="Data" action="HandAttack" amount="0.60" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+				<target type="ProtoUnit">AbstractInfantry</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusZeusActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<civilization>
+				<civName>Zeus</civName>
+			</civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusZeusEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusZeusEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_ZEUS</effect>
+			<effect type="Data" action="HandAttack" amount="0.60" subtype="Damagebonus" unittype="Building" relativity="Absolute">
+				<target type="ProtoUnit">AbstractInfantry</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- HADES: Ranged Soldiers and Heroes gain +1 Range and Line of Sight. -->
+
+	<tech name="ArchaicAgeHades">
+		<effects>
+			<effect mergeMode="remove" type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">AbstractArcher</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">Hero</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="1" subtype="LOS" relativity="Absolute">
+				<target type="ProtoUnit">AbstractArcher</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="1" subtype="LOS" relativity="Absolute">
+				<target type="ProtoUnit">Hero</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusHadesActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Hades</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusHadesEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusHadesEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_HADES</effect>
+			<effect type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">AbstractArcher</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">Hero</target>
+			</effect>
+			<effect type="Data" amount="1" subtype="LOS" relativity="Absolute">
+				<target type="ProtoUnit">AbstractArcher</target>
+			</effect>
+			<effect type="Data" amount="1" subtype="LOS" relativity="Absolute">
+				<target type="ProtoUnit">Hero</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- POSEIDON: Cavalry, Caravans, and Myth Units gain +0.1 Speed per Age.  -->
+
+	<tech name="ArchaicAgePoseidon">
+		<effects>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">AbstractCavalry</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">CaravanGreek</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="ClassicalAgePoseidon">
+		<effects>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">AbstractCavalry</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">CaravanGreek</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="HeroicAgePoseidon">
+		<effects>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">AbstractCavalry</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">CaravanGreek</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="MythicAgePoseidon">
+		<effects>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">AbstractCavalry</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">CaravanGreek</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusPoseidonActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Poseidon</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusPoseidonArchaicEffect</effect>
+		</effects>
+	</tech>	
+	<tech name="TeamBonusPoseidonArchaicEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_POSEIDON</effect>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">AbstractCavalry</target>
+			</effect>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">TradeUnit</target>
+			</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusPoseidonClassicalEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusPoseidonClassicalEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>ClassicalAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">AbstractCavalry</target>
+			</effect>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">TradeUnit</target>
+			</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusPoseidonHeroicEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusPoseidonHeroicEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>HeroicAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">AbstractCavalry</target>
+			</effect>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">TradeUnit</target>
+			</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusPoseidonMythicEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusPoseidonMythicEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>MythicAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">AbstractCavalry</target>
+			</effect>
+			<effect type="Data" amount="0.10" subtype="MaximumVelocity" relativity="Absolute">
+				<target type="ProtoUnit">TradeUnit</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- RA: Villagers gather from Berry Bushes 25% faster. -->
+
+	<tech name="ArchaicAgeRa">
+		<effects>
+			<effect mergeMode="remove" type="Data" action="Gather" amount="1.25" subtype="WorkRate" unittype="BerryBush" relativity="BasePercent">
+				<target type="ProtoUnit">EconomicUpgraded</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusRaActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Ra</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusRaEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusRaEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_RA</effect>
+			<effect type="Data" action="Gather" amount="1.25" subtype="WorkRate" unittype="BerryBush" relativity="BasePercent">
+				<target type="ProtoUnit">EconomicUpgraded</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- ISIS: Town Centers and Citadel Centers support +5 additional population. -->
+
+	<tech name="ArchaicAgeIsis">
+		<effects>
+			<effect mergeMode="remove" type="Data" amount="5.00" subtype="PopulationCapAddition" relativity="Absolute">
+				<target type="ProtoUnit">AbstractSocketedTownCenter</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusIsisActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Isis</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusIsisEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusIsisEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_ISIS</effect>
+			<effect type="Data" amount="5.00" subtype="PopulationCapAddition" relativity="Absolute">
+				<target type="ProtoUnit">AbstractSocketedTownCenter</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- SET: Military Production and Fortress-type buildings (excluding Temple) cost -25% less Wood and Gold. -->
+
+	<tech name="ArchaicAgeSet">
+		<effects>			
+			<effect mergeMode="remove" type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">MigdolStronghold</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">Barracks</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">SiegeWorks</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusSetActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Set</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusSetEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusSetEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_SET</effect>
+
+			<!-- All Fortress-type buildings -->	
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">AbstractFortress</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">AbstractFortress</target>
+			</effect>
+
+			<!-- Greek -->
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">MilitaryAcademy</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">MilitaryAcademy</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">ArcheryRange</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">ArcheryRange</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">Stable</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">Stable</target>
+			</effect>
+
+			<!-- Egyptian -->
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">Barracks</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">Barracks</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">SiegeWorks</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">SiegeWorks</target>
+			</effect>
+
+			<!-- Norse -->
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">Longhouse</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">Longhouse</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">GreatHall</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">GreatHall</target>
+			</effect>
+
+			<!-- Atlantean -->
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">MilitaryBarracks</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">MilitaryBarracks</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">CounterBarracks</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">CounterBarracks</target>
+			</effect>
+
+			<!-- Chinese -->
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">MilitaryCamp</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">MilitaryCamp</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">MachineWorkshop</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">MachineWorkshop</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">ImperialAcademy</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">ImperialAcademy</target>
+			</effect>
+
+			<!-- Japanese -->
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">Guardhouse</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">Guardhouse</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">Dojo</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">Dojo</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="wood" relativity="Percent">
+				<target type="ProtoUnit">StableJapanese</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="Cost" resource="gold" relativity="Percent">
+				<target type="ProtoUnit">StableJapanese</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- THOR: Spawns a Dwarf at your Armory whenever you finish researching an Armory Tech. -->
+
+	<tech name="ArchaicAgeThor">
+		<effects>
+			<effect mergeMode="remove" type="SetOnTechResearchedTech" amount="1.00" techtype="ArmoryTechnology" >ThorDwarfSpawn</effect>
+			<!-- The below line doesn't seem to properly activate TeamTechs. Make the tech volatile tech instead. -->
+			<!--effect mergeMode="add" type="TechStatus" status="active" >TeamBonusThor</effect-->
+		</effects>
+	</tech>
+	<tech name="ThorDwarfSpawn">
+		<effects>
+			<!-- Remove the existing effect and replace it with one that works with any Armory. -->
+			<effect mergeMode="remove" type="CreateUnit" unit="VillagerDwarf" generator="DwarvenArmory" >
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect mergeMode="add" type="CreateUnit" unit="VillagerDwarf" generator="AbstractArmory" >
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+		</effects>
+	</tech>	
+	<tech name="TeamBonusThorActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Thor</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusThorEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusThorEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_THOR</effect>
+			<effect type="SetOnTechResearchedTech" amount="1.00" techtype="ArmoryTechnology">ThorDwarfSpawn</effect>
+		</effects>
+	</tech>
+
+<!-- ODIN: Heroes regenerate 0.4 Hit Points per second. -->
+
+	<tech name="ArchaicAgeOdin">
+		<effects>
+			<!-- We remove both human and hero regen to workaround the the issue of only removing the hero effect causes the human regen to be removed due to a xml merge mismatch. Human regen re-added below. -->
+			<effect mergeMode="remove" type="Data" amount="0.4" subtype="UnitRegenRate" relativity="Absolute">
+				<target type="ProtoUnit">HumanSoldier</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.4" subtype="UnitRegenRate" relativity="Absolute">
+				<target type="ProtoUnit">LogicalTypeHealableHero</target>
+			</effect>
+			<!-- Re-add human regen. -->
+			<effect mergeMode="add" type="Data" amount="0.4" subtype="UnitRegenRate" relativity="Absolute">
+				<target type="ProtoUnit">HumanSoldier</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusOdinActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Odin</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusOdinEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusOdinEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_ODIN</effect>
+			<effect type="Data" amount="0.4" subtype="UnitRegenRate" relativity="Absolute">
+				<target type="ProtoUnit">LogicalTypeHealableHero</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- LOKI: Human Soldiers and Heroes deal +10% counter damage. -->
+
+	<tech name="ArchaicAgeLoki">
+		<effects>
+			<effect mergeMode="remove" type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="MythUnit" relativity="BasePercent">
+				<target type="ProtoUnit">Hersir</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="MythUnit" relativity="BasePercent">
+				<target type="ProtoUnit">Godi</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">Hirdman</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">ThrowingAxeman</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">Huskarl</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">RaidingCavalry</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusLokiActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Loki</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusLokiEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusLokiEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_LOKI</effect>
+
+			<!-- List of Human Soldiers and their bonus multipliers: https://ageofempires.fandom.com/wiki/Human_soldier#Unit_roles -->
+
+			<!-- Heroes Melee, Ranged, and Anti-Flying (used by Greek Heroes) vs Myth Units -->
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="MythUnit" relativity="BasePercent">
+				<target type="ProtoUnit">Hero</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="MythUnit" relativity="BasePercent">
+				<target type="ProtoUnit">Hero</target>
+			</effect>
+			<effect type="Data" action="RangedAttackFlying" amount="1.1" subtype="Damagebonus" unittype="MythUnit" relativity="BasePercent">
+				<target type="ProtoUnit">Hero</target>
+			</effect>
+
+			<!-- Hand Attacks vs Infantry-->
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">Hypaspist</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">Axeman</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">Fanatic</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">FanaticHero</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">Samurai</target>
+			</effect>
+
+			<!-- Ranged Attacks vs Infantry-->
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">Toxotes</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">ChariotArcher</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">ThrowingAxeman</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">Cheiroballista</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">CheiroballistaHero</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">Arcus</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">ArcusHero</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">FireArcher</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractInfantry" relativity="BasePercent">
+				<target type="ProtoUnit">YumiArcher</target>
+			</effect>
+
+			<!-- Hand Attacks vs Ranged Soldiers -->
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">Hippeus</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">Hetairos</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">WarElephant</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">MercenaryCavalry</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">CamelRider</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">Huskarl</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">RaidingCavalry</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">Contarius</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">ContariusHero</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">WhiteHorseCavalry</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">			
+				<target type="ProtoUnit">TigerCavalry</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">TerracottaRider</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">Shinobi</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">	
+				<target type="ProtoUnit">NaginataRider</target>
+			</effect>
+
+			<!-- Ranged Attacks vs Ranged Soldiers -->
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">Peltast</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">Slinger</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">Turma</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">TurmaHero</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">WuzuJavelineer</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractArcher" relativity="BasePercent">
+				<target type="ProtoUnit">WhiteHorseCavalry</target>
+			</effect>
+
+			<!-- Hand Attacks vs Cavalry -->
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">Hoplite</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">Prodromos</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">Militia</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">CamelRider</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">Spearman</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">Mercenary</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">Hirdman</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">Katapeltes</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">KatapeltesHero</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">Fanatic</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">FanaticHero</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">GeHalberdier</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">TigerCavalry</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">TigerCavalryDismounted</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				<target type="ProtoUnit">YariSpearman</target>
+			</effect>
+
+			<!-- Ranged Attacks vs Cavalry -->
+			<!--effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractCavalry" relativity="BasePercent">
+				None yet.
+			</effect-->
+
+			<!-- Hand Attacks vs Siege Weapons-->
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractSiegeWeapon" relativity="BasePercent">
+				<target type="ProtoUnit">TerracottaRider</target>
+			</effect>
+
+			<!-- Ranged Attacks vs Siege Weapons-->
+			<!--effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractSiegeWeapon" relativity="BasePercent">
+				None yet.
+			</effect-->
+
+			<!-- Hand Attacks vs Buildings -->
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="Building" relativity="BasePercent">
+				<target type="ProtoUnit">WarElephant</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="Building" relativity="BasePercent">
+				<target type="ProtoUnit">Destroyer</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="Building" relativity="BasePercent">
+				<target type="ProtoUnit">DestroyerHero</target>
+			</effect>
+
+			<!-- Ranged Attacks vs Buildings -->
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="Building" relativity="BasePercent">
+				<target type="ProtoUnit">Gastraphetoros</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="Building" relativity="BasePercent">
+				<target type="ProtoUnit">FireArcher</target>
+			</effect>
+
+			<!-- Hand Attacks vs Towers -->
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractTower" relativity="BasePercent">
+				<target type="ProtoUnit">VillagerAtlanteanHero</target>
+			</effect>
+			<effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractTower" relativity="BasePercent">
+				<target type="ProtoUnit">KuafuHero</target><!-- Attack only used against herdables, so not really relevent... -->
+			</effect>
+
+			<!-- Ranged Attacks vs Towers -->
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractTower" relativity="BasePercent">
+				<target type="ProtoUnit">KuafuHero</target>
+			</effect>
+			<effect type="Data" action="HuntingRangedAttack" amount="1.1" subtype="Damagebonus" unittype="AbstractTower" relativity="BasePercent">
+				<target type="ProtoUnit">KuafuHero</target><!-- Attack only used against huntables, so not really relevent... -->
+			</effect>
+
+			<!-- Hand Attacks vs Ships-->
+			<!--effect type="Data" action="HandAttack" amount="1.1" subtype="Damagebonus" unittype="Ship" relativity="BasePercent">
+				None yet.
+			</effect-->
+
+			<!-- Ranged Attacks vs Ships-->
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="Ship" relativity="BasePercent">
+				<target type="ProtoUnit">Cheiroballista</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="1.1" subtype="Damagebonus" unittype="Ship" relativity="BasePercent">
+				<target type="ProtoUnit">CheiroballistaHero</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- FREYR: Repairing buildings is free. -->
+
+	<!-- The effect is actually implemented in major_gods.xml with a <buildingrepairfactor> tag. -->
+	<!-- However, we don't need to worry about stacking because we're setting the base value to 0, -->
+	<!-- so we don't need to remove anything from the ArchaicAgeFreyr tech. -->
+	<tech name="TeamBonusFreyrActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Freyr</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusFreyrEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusFreyrEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_FREYR</effect>
+			<effect type="Data" amount="0.00" subtype="RepairCostFactor" relativity="Assign">
+				<target type="Player"></target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- KRONOS: Lost Siege Weapons and Myth Units return 20% of their resource cost. -->
+
+    <tech name="ArchaicAgeKronos">
+		<effects>
+			<effect mergeMode="remove" type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Wood" relativity="Absolute">
+				<target type="ProtoUnit">AbstractSiegeWeapon</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Gold" relativity="Absolute">
+				<target type="ProtoUnit">AbstractSiegeWeapon</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Food" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Wood" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Gold" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Favor" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">PrometheanOffspring</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Food" relativity="Assign">
+				<target type="ProtoUnit">PrometheanOffspring</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusKronosActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Kronos</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusKronosEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusKronosEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_KRONOS</effect>
+
+			<!-- Siege Weapons -->
+			<effect type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Food" relativity="Absolute">
+				<target type="ProtoUnit">AbstractSiegeWeapon</target>
+			</effect>
+			<effect type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Wood" relativity="Absolute">
+				<target type="ProtoUnit">AbstractSiegeWeapon</target>
+			</effect>
+			<effect type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Gold" relativity="Absolute">
+				<target type="ProtoUnit">AbstractSiegeWeapon</target>
+			</effect>
+			<effect type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Favor" relativity="Absolute">
+				<target type="ProtoUnit">AbstractSiegeWeapon</target>
+			</effect>
+
+			<!-- Myth Units -->
+			<effect type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Food" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Wood" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Gold" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+			<effect type="Data" amount="0.20" subtype="ResourceReturnRate" resource="Favor" relativity="Absolute">
+				<target type="ProtoUnit">MythUnit</target>
+			</effect>
+
+			<!-- EXCEPTIONS -->			
+			
+			<!-- Shade of Hades -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Gold" relativity="Assign">
+				<target type="ProtoUnit">HadesShade</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">HadesShade</target>
+			</effect>
+			
+			<!-- Pegasus (Winged Messenger) -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Food" relativity="Assign">
+				<target type="ProtoUnit">PegasusWingedMessenger</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">PegasusWingedMessenger</target>
+			</effect>
+
+			<!-- Pegasus (Bridle of Pegasus Relic) -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Food" relativity="Assign">
+				<target type="ProtoUnit">PegasusBridleOfPegasus</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">PegasusBridleOfPegasus</target>
+			</effect>
+
+			<!-- Minion (Ancestors) -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Gold" relativity="Assign">
+				<target type="ProtoUnit">Minion</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">Minion</target>
+			</effect>
+
+			<!-- Minion (Mummy) -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Gold" relativity="Assign">
+				<target type="ProtoUnit">MinionReincarnated</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">MinionReincarnated</target>
+			</effect>
+
+			<!-- Walking Woods -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Wood" relativity="Assign">
+				<target type="ProtoUnit">AbstractWalkingWoods</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">AbstractWalkingWoods</target>
+			</effect>
+
+			<!-- Carnivora -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">Carnivora</target>
+			</effect>
+
+			<!-- Water Carnivora -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">WaterCarnivora</target>
+			</effect>
+
+			<!-- Promethean Offspring -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Food" relativity="Assign">
+				<target type="ProtoUnit">PrometheanOffspring</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">PrometheanOffspring</target>
+			</effect>
+
+			<!-- Wretch (Onmoraki) -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Gold" relativity="Assign">
+				<target type="ProtoUnit">Wretch</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">Wretch</target>
+			</effect>
+
+			<!-- Fei (Fei Beasts)-->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Food" relativity="Assign">
+				<target type="ProtoUnit">Fei</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">Fei</target>
+			</effect>
+
+			<!-- Fei (Tail of Fei Relic)-->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Food" relativity="Assign">
+				<target type="ProtoUnit">FeiTailOfFei</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">FeiTailOfFei</target>
+			</effect>
+
+			<!-- Shinigami Revenant -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Wood" relativity="Assign">
+				<target type="ProtoUnit">ShinigamiRevenant</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">ShinigamiRevenant</target>
+			</effect>
+
+			<!-- Shinigami Vengeful -->
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Wood" relativity="Assign">
+				<target type="ProtoUnit">ShinigamiVengeful</target>
+			</effect>
+			<effect type="Data" amount="0.0" subtype="ResourceReturnRate" resource="Favor" relativity="Assign">
+				<target type="ProtoUnit">ShinigamiVengeful</target>
+			</effect>
+
+			<!-- 
+				EXCEPTIONS WITH NO COSTS (As reference, in case of future updates) 
+				
+				PhoenixEgg
+				FimbulwinterWolf
+				Nidhogg
+				SpiderEgg
+				Yinglong
+				WolfShrineOfTheHunt
+				MasterlessSword
+				AbstractTitan
+				Raven
+				RelicMonkey
+				RelicGoldenLion
+			-->
+
+		</effects>
+	</tech>
+
+<!-- ORANOS: All units have +4 Line of Sight. -->
+
+	<tech name="ArchaicAgeOranos">
+		<effects>
+			<effect mergeMode="remove" type="Data" amount="4" subtype="LOS" relativity="Absolute">
+				<target type="ProtoUnit">Unit</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="-4" subtype="LOS" relativity="Absolute">
+				<target type="ProtoUnit">AbstractOracle</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusOranosActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Oranos</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusOranosEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusOranosEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_ORANOS</effect>			
+			<effect type="Data" amount="4" subtype="LOS" relativity="Absolute">
+				<target type="ProtoUnit">Unit</target>
+			</effect>
+			<effect type="Data" amount="-4" subtype="LOS" relativity="Absolute">
+				<target type="ProtoUnit">AbstractOracle</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- GAIA: Economic upgrades cost -35% less. -->
+
+	<tech name="ArchaicAgeGaia">
+		<effects>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Husbandry</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">Husbandry</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Plow</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">Plow</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">HuntingEquipment</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">HuntingEquipment</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Irrigation</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">Irrigation</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">FloodControl</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">FloodControl</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">HandAxe</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">HandAxe</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">BowSaw</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">BowSaw</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">Carpenters</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">Carpenters</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">Pickaxe</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Pickaxe</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">ShaftMine</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">ShaftMine</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">Quarry</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Quarry</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusGaiaActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Gaia</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusGaiaEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusGaiaEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_GAIA</effect>
+
+			<!-- Husbandry -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">Husbandry</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Husbandry</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">Husbandry</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">Husbandry</target>
+			</effect>
+
+			<!-- Hunting Equipment -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">HuntingEquipment</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">HuntingEquipment</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">HuntingEquipment</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">HuntingEquipment</target>
+			</effect>
+
+			<!-- Plow -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">Plow</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Plow</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">Plow</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">Plow</target>
+			</effect>
+
+			<!-- Irrigation -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">Irrigation</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Irrigation</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">Irrigation</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">Irrigation</target>
+			</effect>
+
+			<!-- Flood Control -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">FloodControl</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">FloodControl</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">FloodControl</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">FloodControl</target>
+			</effect>
+
+			<!-- Hand Axe -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">HandAxe</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">HandAxe</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">HandAxe</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">HandAxe</target>
+			</effect>
+
+			<!-- Bow Saw -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">BowSaw</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">BowSaw</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">BowSaw</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">BowSaw</target>
+			</effect>
+
+			<!-- Carpenters -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">Carpenters</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Carpenters</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">Carpenters</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">Carpenters</target>
+			</effect>
+
+			<!-- Pickaxe -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">Pickaxe</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Pickaxe</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">Pickaxe</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">Pickaxe</target>
+			</effect>
+
+			<!-- Shaft Mine -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">ShaftMine</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">ShaftMine</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">ShaftMine</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">ShaftMine</target>
+			</effect>
+
+			<!-- Quarry -->
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Food" relativity="Percent">
+				<target type="Tech">Quarry</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Wood" relativity="Percent">
+				<target type="Tech">Quarry</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Gold" relativity="Percent">
+				<target type="Tech">Quarry</target>
+			</effect>
+			<effect type="Data" amount="0.65" subtype="Cost" resource="Favor" relativity="Percent">
+				<target type="Tech">Quarry</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- FUXI: Buildings research technologies 60% faster. -->
+
+	<tech name="ArchaicAgeFuxi">
+		<effects>
+			<!-- Remove the 400% increase to research rate, replace with 250%. An extra 60% is granted at all time by the team bonus, so technically a buff to Fuxi. -->
+			<effect mergeMode="remove" type="Data" subtype="BuildingChainEffect" unittype="Building" effecttype="Connected" modifytype="ResearchRate" amount="4.000" relativity="Percent">
+				<target type="Player"></target>
+			</effect>
+			<effect mergeMode="add" type="Data" subtype="BuildingChainEffect" unittype="Building" effecttype="Connected" modifytype="ResearchRate" amount="2.500" relativity="Percent">
+				<target type="Player"></target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusFuxiActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Fuxi</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusFuxiEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusFuxiEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_FUXI</effect>
+			<effect type="Data" amount="1.6" subtype="ResearchRate" relativity="BasePercent">
+				<target type="ProtoUnit">Building</target>
+			</effect>
+			<!-- Fuxi's increased research rate isn't supposed to affect Age-ups, so we need to counteract it. -->
+			<effect type="Data" amount="1.6" subtype="ResearchPoints" relativity="Percent">
+				<target type="techWithFlag">AgeUpgrade</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- NUWA: Cavalry gain +10% Hit Points. -->
+
+	<tech name="ArchaicAgeNuwa">
+		<effects>
+			<effect mergeMode="remove" type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+				<target type="ProtoUnit">AbstractCavalry</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusNuwaActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Nuwa</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusNuwaEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusNuwaEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_NUWA</effect>
+			<effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+				<target type="ProtoUnit">AbstractCavalry</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- SHENNONG: Plow, Irrigation, and Flood Control are researched instantly for free in their respective Ages. -->
+
+	<!-- Shennong's bonus doesn't kick in until Classical, so nothing removed from the ArchaicAgeShennong tech. -->
+	<tech name="TeamBonusShennongActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Shennong</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusShennongEffect</effect>
+		</effects>
+	</tech>	
+	<tech name="TeamBonusShennongEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_SHENNONG</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusShennongClassicalEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusShennongClassicalEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>ClassicalAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">Plow</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusShennongHeroicEffect</effect>
+		</effects>
+	</tech>	
+	<tech name="TeamBonusShennongHeroicEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>HeroicAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">Irrigation</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusShennongMythicEffect</effect>
+		</effects>
+	</tech>	
+	<tech name="TeamBonusShennongMythicEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>MythicAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">FloodControl</effect>
+		</effects>
+	</tech>
+
+<!-- AMATERASU: Gain a +0.5 trickle of Gold. -->
+
+	<tech name="ArchaicAgeAmaterasu">
+		<effects>
+			<!-- ADDED a negative tricke to counteract the base trickle from the Bushido power. -->
+			<!-- The base 0.5 trickle is regained in the TeamTech below. -->
+			<effect type="Data" amount="-0.5" subtype="ResourceTrickleRate" resource="Gold" relativity="Absolute">
+				<target type="Player"></target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusAmaterasuActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Amaterasu</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusAmaterasuEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusAmaterasuEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_AMATERASU</effect>
+			<effect type="Data" amount="0.5" subtype="ResourceTrickleRate" resource="Gold" relativity="Absolute">
+				<target type="Player"></target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- TSUKUYOMI: A free Kitsune appears at the Temple whenever you finish researching an Age Advancement. -->
+
+	<!-- Tsukuyomi's bonus doesn't kick in until Classical, so nothing removed from the ArchaicAgeTsukuyomi tech. -->
+	<tech name="ClassicalAgeTsukuyomi">
+		<effects>
+			<effect mergeMode="remove" type="CreateUnit" unit="Kitsune" generator="Temple">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="0.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="HeroicAgeTsukuyomi">
+		<effects>
+			<effect mergeMode="remove" type="CreateUnit" unit="Kitsune" generator="Temple">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="0.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="MythicAgeTsukuyomi">
+		<effects>
+			<effect mergeMode="remove" type="CreateUnit" unit="Kitsune" generator="Temple">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="0.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusTsukuyomiActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Tsukuyomi</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusTsukuyomiEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusTsukuyomiEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_TSUKUYOMI</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusTsukuyomiClassicalEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusTsukuyomiClassicalEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>ClassicalAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="CreateUnit" unit="Kitsune" generator="Temple">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="0.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusTsukuyomiHeroicEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusTsukuyomiHeroicEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>HeroicAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="CreateUnit" unit="Kitsune" generator="Temple">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="0.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusTsukuyomiMythicEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusTsukuyomiMythicEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>MythicAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="CreateUnit" unit="Kitsune" generator="Temple">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="0.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- SUSANOO: Unit abilities recharge +33% faster -->
+
+	<tech name="ArchaicAgeSusanoo">
+		<effects>
+			<effect mergeMode="remove" type="Data" amount="0.75" subtype="RechargeTime" relativity="BasePercent">
+				<target type="ProtoUnit">Unit</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusSusanooActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Susanoo</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusSusanooEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusSusanooEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_SUSANOO</effect>
+			<effect type="Data" amount="0.75" subtype="RechargeTime" relativity="BasePercent">
+				<target type="ProtoUnit">Unit</target>
+			</effect>
+		</effects>
+	</tech>
+
+</techtreemods>

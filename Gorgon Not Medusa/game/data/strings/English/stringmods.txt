@@ -1,0 +1,10 @@
+// Greek Myth Units
+ID = "STR_UNIT_MEDUSA_NAME"   ;   Str = "Gorgon"
+ID = "STR_UNIT_MEDUSA_MATRIARCH_NAME"   ;   Str = "Gorgon Matriarch"
+ID = "STR_TECH_FACE_OF_THE_GORGON_LR"   ;   Str = "Hera upgrades Gorgons to Gorgon Matriarchs, which have more range and turn enemies to stone more often."
+
+// Mission 9 Revelation
+//ID = "STR_FOTT_09_CHAT_14"   ;   Str = "These medusai will assist us against our foes!"
+
+
+ID = "STR_HISTORY_UNITS_MEDUSA"   ;   Str = "Scientific name -- Gorgo\nSize -- 7' tall\nDiet -- carnivore, largely humans\n\nThe Gorgons were three sisters, Stheno, Euryale, and most famously, Medusa. They were children of sea gods with live sea snakes for hair, scaly necks, boar-like tusks, golden hands, and bronze wings. One tale is that Medusa was once a beautiful maid who eloped with Poseidon in a temple of Athena. Angered, the goddess turned Medusa into a monster so ugly that those who gazed upon her were turned to stone. With the help of Athena and Hermes, the hero Perseus lopped off Medusa's head, whereupon the winged horse Pegasus and the giant Chrysaor sprang from her neck. Her head was used as a weapon to kill the sea monster Cetus and then it was mounted on Athena's shield."
