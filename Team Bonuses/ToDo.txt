@@ -1,0 +1,16 @@
+- Make your own God's team bonus not show a notification for yourself? (It does help remind players what these new bonuses are, though.)
+- Add AI logic for handling Dwarves in non-Norse civs? Maybe too much work to fix a minor issue.
+- More icons in activation message? (Stat icons, unit type icons...)
+- Add tech icons? Would be nice to see them in the unit's info/history screen.
+- Consider making the bonuses dynamic: They're lost if your ally is eliminated or changes their diplomacy towards you. Other bonuses can be gained if other players ally you.
+- Find way to make TeamTechs that are activated at the start apply to the team. Current workaround is making the tech activate when the first villager spawns.
+- For Loki's bonus, are there any Heroes that have multiple attacks only some having a bonus towards a unit type?
+- Maybe make new abstract types to reduce the amount of copy/paste needed to target multiple units/buildings?
+- Maybe instead of Fuxi granting an unconditional +60% research rate, he instead enabled the Favored Land mechanic that needs to be utilitzed to get the research buff?
+- Instead of removing the bonus from each Major God, add a pre-req so the team bonus only activates if you don't already have the bonus? (The less I need to modify from the original files, the better)
+- For items that need to be removed, don't include attirbutes that aren't needed to find a match to improve compatiblity with future updates and other mods.
+
+Gotcha's:
+- Fuxi's research increase should not affect Age-ups.
+- Should Kronos spawn 2 Kitsune with Tsukuyomi's team bonus? (Probaly not, could make rush too good, 1 kitsune already gives speed boost)
+- Does Hades recieve Dwarves for Ballistics and Burning Pitch? (no)

@@ -276,11 +276,174 @@
 		</effects>
 	</tech>
 
+<!-- DEMETER: Town and Village Centers spawn Herdables on age up. -->
+
+	<tech name="ClassicalAgeDemeter">
+		<effects>
+			<effect mergeMode="remove" type="CreateUnit" unit="Goat" generator="TownCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="3.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect mergeMode="remove" type="CreateUnit" unit="Goat" generator="VillageCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect mergeMode="remove" type="CreateUnit" unit="Goat" generator="CitadelCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="HeroicAgeDemeter">
+		<effects>
+			<effect mergeMode="remove" type="CreateUnit" unit="Pig" generator="TownCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="3.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect mergeMode="remove" type="CreateUnit" unit="Pig" generator="VillageCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect mergeMode="remove" type="CreateUnit" unit="Pig" generator="CitadelCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="MythicAgeDemeter">
+		<effects>
+			<effect mergeMode="remove" type="CreateUnit" unit="Cow" generator="TownCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="3.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect mergeMode="remove" type="CreateUnit" unit="Cow" generator="VillageCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect mergeMode="remove" type="CreateUnit" unit="Cow" generator="CitadelCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusDemeterActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<Civilization>
+				<civName>Demeter</civName>
+			</Civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusDemeterEffect</effect>
+		</effects>
+	</tech>	
+	<tech name="TeamBonusDemeterEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_DEMETER</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusDemeterClassicalEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusDemeterClassicalEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>ClassicalAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="CreateUnit" unit="Goat" generator="TownCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="3.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect type="CreateUnit" unit="Goat" generator="VillageCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect type="CreateUnit" unit="Goat" generator="CitadelCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusDemeterHeroicEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusDemeterHeroicEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>HeroicAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="CreateUnit" unit="Pig" generator="TownCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="3.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect type="CreateUnit" unit="Pig" generator="VillageCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect type="CreateUnit" unit="Pig" generator="CitadelCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect type="TechStatus" status="obtainable">TeamBonusDemeterMythicEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusDemeterMythicEffect">
+		<status>UNOBTAINABLE</status>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<specificage>MythicAge</specificage>
+		</prereqs>
+
+		<effects>
+			<effect type="CreateUnit" unit="Cow" generator="TownCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="3.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect type="CreateUnit" unit="Cow" generator="VillageCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+			<effect type="CreateUnit" unit="Cow" generator="CitadelCenter" allgenerators="true">
+				<pattern type="Leaving" speed="0.00" radius="0.00" quantity="1.00" minradius="0.00">
+					<offset x="-5.00" y="0.00" z="0.00"></offset>
+				</pattern>
+			</effect>
+		</effects>
+	</tech>
+
 <!-- RA: Villagers gather from Berry Bushes 25% faster. -->
 
 	<tech name="ArchaicAgeRa">
 		<effects>
-			<effect mergeMode="remove" type="Data" action="Gather" amount="1.25" subtype="WorkRate" unittype="BerryBush" relativity="BasePercent">
+			<effect mergeMode="remove" type="Data" action="Gather" amount="1.25" subtype="WorkRate" unittype="WildCrops" relativity="BasePercent">
 				<target type="ProtoUnit">EconomicUpgraded</target>
 			</effect>
 		</effects>
@@ -305,7 +468,7 @@
 		<status>UNOBTAINABLE</status>
 		<effects>
 			<effect type="TextOutput">STR_TEAM_BONUS_RA</effect>
-			<effect type="Data" action="Gather" amount="1.25" subtype="WorkRate" unittype="BerryBush" relativity="BasePercent">
+			<effect type="Data" action="Gather" amount="1.25" subtype="WorkRate" unittype="WildCrops" relativity="BasePercent">
 				<target type="ProtoUnit">EconomicUpgraded</target>
 			</effect>
 		</effects>
@@ -1707,6 +1870,195 @@
 			<effect type="TextOutput">STR_TEAM_BONUS_SUSANOO</effect>
 			<effect type="Data" amount="0.75" subtype="RechargeTime" relativity="BasePercent">
 				<target type="ProtoUnit">Unit</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- HUITZILOPOCHTLI: Temples, Great Temples, Village- and Town Centers refund 33% of their cost upon completion.-->
+
+	<tech name="ArchaicAgeHuitzilopochtli">
+		<effects>
+			<effect mergeMode="remove" type="Data" subtype="ResourceReturnRate" resource="Wood" relativity="Absolute">
+				<target type="ProtoUnit">AbstractTownCenter</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" subtype="ResourceReturnRate" resource="Gold" relativity="Absolute">
+				<target type="ProtoUnit">AbstractTownCenter</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" subtype="Flag" flag="ReturnResourcesOnConstruction" relativity="Absolute">
+				<target type="ProtoUnit">AbstractTownCenter</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" subtype="ResourceReturnRate" resource="Wood" relativity="Absolute">
+				<target type="ProtoUnit">GreatTemple</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" subtype="ResourceReturnRate" resource="Gold" relativity="Absolute">
+				<target type="ProtoUnit">GreatTemple</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" subtype="Flag" flag="ReturnResourcesOnConstruction" relativity="Absolute">
+				<target type="ProtoUnit">GreatTemple</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" subtype="ResourceReturnRate" resource="Wood" relativity="Absolute">
+				<target type="ProtoUnit">Temple</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" subtype="ResourceReturnRate" resource="Gold" relativity="Absolute">
+				<target type="ProtoUnit">Temple</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" subtype="Flag" flag="ReturnResourcesOnConstruction" relativity="Absolute">
+				<target type="ProtoUnit">Temple</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusHuitzilopochtliActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<civilization>
+				<civName>Huitzilopochtli</civName>
+			</civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusHuitzilopochtliEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusHuitzilopochtliEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_HUITZILOPOCHTLI</effect>
+			<effect type="Data" amount="0.334" subtype="ResourceReturnRate" resource="Wood" relativity="Absolute">
+				<target type="ProtoUnit">AbstractTownCenter</target>
+			</effect>
+			<effect type="Data" amount="0.334" subtype="ResourceReturnRate" resource="Gold" relativity="Absolute">
+				<target type="ProtoUnit">AbstractTownCenter</target>
+			</effect>
+			<effect type="Data" amount="1.0" subtype="Flag" flag="ReturnResourcesOnConstruction" relativity="Absolute">
+				<target type="ProtoUnit">AbstractTownCenter</target>
+			</effect>
+			<effect type="Data" amount="0.334" subtype="ResourceReturnRate" resource="Wood" relativity="Absolute">
+				<target type="ProtoUnit">AbstractFortress</target>
+			</effect>
+			<effect type="Data" amount="0.334" subtype="ResourceReturnRate" resource="Gold" relativity="Absolute">
+				<target type="ProtoUnit">AbstractFortress</target>
+			</effect>
+			<effect type="Data" amount="1.0" subtype="Flag" flag="ReturnResourcesOnConstruction" relativity="Absolute">
+				<target type="ProtoUnit">AbstractFortress</target>
+			</effect>
+			<effect type="Data" amount="0.334" subtype="ResourceReturnRate" resource="Wood" relativity="Absolute">
+				<target type="ProtoUnit">Temple</target>
+			</effect>
+			<effect type="Data" amount="0.334" subtype="ResourceReturnRate" resource="Gold" relativity="Absolute">
+				<target type="ProtoUnit">Temple</target>
+			</effect>
+			<effect type="Data" amount="1.0" subtype="Flag" flag="ReturnResourcesOnConstruction" relativity="Absolute">
+				<target type="ProtoUnit">Temple</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- TEZCATLIPOCA: Towers and Traps are built 25% faster and inflict +25% damage.-->
+
+	<tech name="ArchaicAgeTezcatlipoca">
+		<effects>
+			<effect mergeMode="remove" type="Data" allactions="1" subtype="Damage" relativity="BasePercent">
+				<target type="ProtoUnit">SentryTower</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" subtype="BuildPoints" relativity="Percent">
+				<target type="ProtoUnit">SentryTower</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" allactions="1" subtype="Damage" relativity="BasePercent">
+				<target type="ProtoUnit">AbstractTrap</target>
+			</effect>
+			<effect mergeMode="remove" type="Data" subtype="BuildPoints" relativity="Percent">
+				<target type="ProtoUnit">AbstractTrap</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusTezcatlipocaActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<civilization>
+				<civName>Tezcatlipoca</civName>
+			</civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusTezcatlipocaEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusTezcatlipocaEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_TEZCATLIPOCA</effect>
+			<effect type="Data" allactions="1" amount="1.25" subtype="Damage" relativity="BasePercent">
+				<target type="ProtoUnit">SentryTower</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="BuildPoints" relativity="Percent">
+				<target type="ProtoUnit">SentryTower</target>
+			</effect>
+			<effect type="Data" allactions="1" amount="1.25" subtype="Damage" relativity="BasePercent">
+				<target type="ProtoUnit">AbstractTrap</target>
+			</effect>
+			<effect type="Data" amount="0.75" subtype="BuildPoints" relativity="Percent">
+				<target type="ProtoUnit">AbstractTrap</target>
+			</effect>
+		</effects>
+	</tech>
+
+<!-- QUETZALCOATL: Heroic Age Ranged Units +2 Range. -->
+
+	<tech name="ArchaicAgeQuetzalcoatl">
+		<effects>
+			<effect mergeMode="remove" type="Data" action="RangedAttack" amount="2.0" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">EagleWarrior</target>
+			</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusQuetzalcoatlActivation">
+		<status>OBTAINABLE</status>
+		<flag>TeamTech</flag>
+
+		<flag>Volatile</flag>
+		<prereqs>
+			<civilization>
+				<civName>Quetzalcoatl</civName>
+			</civilization>
+			<typecount unit="AbstractVillager" count="1.00" state="aliveState" operator="gte"></typecount>
+		</prereqs>
+
+		<effects>
+			<effect type="TechStatus" status="active">TeamBonusQuetzalcoatlEffect</effect>
+		</effects>
+	</tech>
+	<tech name="TeamBonusQuetzalcoatlEffect">
+		<status>UNOBTAINABLE</status>
+		<effects>
+			<effect type="TextOutput">STR_TEAM_BONUS_QUETZALCOATL</effect>			
+			<effect type="Data" action="RangedAttack" amount="2.0" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">Peltast</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="2.0" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">ChariotArcher</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="2.0" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">Godi</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="2.0" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">Arcus</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="2.0" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">ChuKoNu</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="2.0" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">YumiHorseArcher</target>
+			</effect>
+			<effect type="Data" action="RangedAttack" amount="2.0" subtype="MaximumRange" relativity="Absolute">
+				<target type="ProtoUnit">EagleWarrior</target>
 			</effect>
 		</effects>
 	</tech>

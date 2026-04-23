@@ -3,6 +3,7 @@
 ID = "STR_TEAM_BONUS_ZEUS"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(greek/static_color/major_gods/zeus_icon_round.png)\"> Zeus grants your Infantry +60% bonus damage against buildings!"
 ID = "STR_TEAM_BONUS_HADES"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(greek/static_color/major_gods/hades_icon_round.png)\"> Hades grants your Ranged Soldiers and Heroes +1 Range and Line of Sight!"
 ID = "STR_TEAM_BONUS_POSEIDON"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(greek/static_color/major_gods/poseidon_icon_round.png)\"> Poseidon grants your Cavalry, Caravans, and Myth Units +0.1 Speed per Age!"
+ID = "STR_TEAM_BONUS_DEMETER"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(greek_demeter/static_color/major_gods/demeter_icon_round.png)\"> Demeter grants you herdable animals at your Town and Village Centers each Age!"
 ID = "STR_TEAM_BONUS_RA"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(egyptian/static_color/major_gods/ra_icon_round.png)\"> Ra helps your workers gather from Berry Bushes 25% faster!"
 ID = "STR_TEAM_BONUS_ISIS"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(egyptian/static_color/major_gods/isis_icon_round.png)\"> Isis grants your Town Centers support for an additional 5 population!"
 ID = "STR_TEAM_BONUS_SET"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(egyptian/static_color/major_gods/set_icon_round.png)\"> Set makes your military production and Fortress-type buildings cost 25% less Wood and Gold!"
@@ -19,6 +20,9 @@ ID = "STR_TEAM_BONUS_SHENNONG"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/d
 ID = "STR_TEAM_BONUS_AMATERASU"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(japanese/static_color/major_gods/amaterasu_icon_round.png)\"> Amaterasu grants you a small trickle of 0.5 Gold per second!"
 ID = "STR_TEAM_BONUS_TSUKUYOMI"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(japanese/static_color/major_gods/tsukuyomi_icon_round.png)\"> Tsukuyomi will grant you a free Kitsune at your Temple each Age!"
 ID = "STR_TEAM_BONUS_SUSANOO"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(japanese/static_color/major_gods/susanoo_icon_round.png)\"> Susanoo grants your units' abilities 33% faster recharge!"
+ID = "STR_TEAM_BONUS_HUITZILOPOCHTLI"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(aztec/static_color/major_gods/Huitzilopochtli_icon_round.png)\"> Huitzilopochtli will return 33% of resources spent constructing Temples, Fortress-like buildings, Village- and Town Centers!"
+ID = "STR_TEAM_BONUS_TEZCATLIPOCA"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(aztec/static_color/major_gods/Tezcatlipoca_icon_round.png)\"> Tezcatlipoca makes your Towers and Traps build 25% faster and inflict +25% damage!"
+ID = "STR_TEAM_BONUS_QUETZALCOATL"   ;   Str = "<icon=\"(24)(in_game/hud/diplomacy/dip_ally.png)\"><icon=\"(24)(aztec/static_color/major_gods/Quetzalcoatl_icon_round.png)\"> Quetzalcoatl grants your Heroic Age Ranged Soldiers +2 Range!"
 
 // Major God bonuses list
 
@@ -43,6 +47,13 @@ ID = "STR_CIV_POSEIDON_LR"   ;   Str = "Focus: Cavalry and Economy.
 • Market exchange rates improved by ${POSEIDON_MARKET_RATE_IMPROVEMENT}%.
 • A free Hippocampus respawns at the first Dock.
 • TEAM: Cavalry, Caravans, and Myth Units gain +${POSEIDON_UNITS_SPEED_BONUS} speed per age."
+
+ID = "STR_CIV_DEMETER_LR"   ;   Str = "Focus: Expansion and Resource Gathering.
+• Herdables improve Favor gather rate when near a Temple. (max. 10 herdables per Temple)
+• Buildings build faster when close to Gold mines.
+• +${DEMETER_FARMER_COUNT_IMPROVEMENT} Villagers can work a Farm.
+• Village Centers have additional HP and increased attack per garrisoned Villager.
+• TEAM: Town and Village Centers spawn Herdables on age up."
 
 // Egyptian
 ID = "STR_CIV_RA_LR"   ;   Str = "Focus: Migdol Stronghold units and Empowerment.
@@ -155,3 +166,19 @@ ID = "STR_CIV_SUSANOO_LR"   ;   Str = "Focus: Myth Units and God Powers.
 • Myth units earn Bushidō XP passively, and through combat.
 • Invoking a God Power makes others ${SUSANOO_GOD_POWER_COST_REDUCTION}% cheaper to reinvoke.
 • TEAM: Unit special abilities recharge ${SUSANOO_UNIT_RECHARGE_TIME}% faster."
+
+ID = "STR_CIV_HUITZILOPOCHTLI_LR"   ;   Str = "Focus: Conquest and Expansion.
+• Collecting tonalli earns resources in addition to Favor equal to ${HUITZILOPOCHTLI_TONALLI_RESOURCE_REWARD}% of the defeated unit's cost.
+• Shorn Ones have +${HUITZILOPOCHTLI_SHORN_ONE_HITPOINTS}% hitpoints and generate +${HUITZILOPOCHTLI_SHORN_ONES_TONALLI}% more tonalli in combat.
+• TEAM: Temples, Fortress-like buildings, Village- and Town Centers refund ${HUITZILOPOCHTLI_BUILDING_COST_REDUCTION}% of their cost upon completion."
+
+ID = "STR_CIV_TEZCATLIPOCA_LR"   ;   Str = "Focus: Defense and Myth Units.
+• Every ${TEZCATLIPOCA_MYTH_UNIT_INTERVAL} Myth Units lost spawn an Obsidian Shard; if the Shard survives long enough, it summons a free Myth Unit of the current age.
+• Devoting Settlers grants +${TEZCATLIPOCA_DEVOTION_ARCHAIC}%/+${TEZCATLIPOCA_DEVOTION_CLASSICAL}%/+${TEZCATLIPOCA_DEVOTION_HEROIC}%/+${TEZCATLIPOCA_DEVOTION_MYTHIC}% more Favor per age.
+• TEAM: Towers and Traps are built ${TEZCATLIPOCA_TOWER_BUILD_TIME}% faster and inflict +${TEZCATLIPOCA_TOWER_DAMAGE}% damage."
+
+ID = "STR_CIV_QUETZALCOATL_LR"   ;   Str = "Focus: Warrior Priests and Nobles Hut Warriors.
+• Warrior Priests generate ${QUETZALCOATL_BLOODLETTING} Favor per second by performing Bloodletting at Temples.
+• Nobles' Hut units +${QUETZALCOATL_NOBLES_HUT_HP}% hitpoints.
+• Calpulli and their additions cost -${QUETZALCOATL_CALPULLI_DISCOUNT}%.
+• TEAM: Heroic Age Ranged soldiers +${QUETZALCOATL_EAGLE_WARRIOR_RANGE} Range."

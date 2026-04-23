@@ -56,24 +56,42 @@
 	<tech name="RelicCharonsObol"><flag>TeamTech</flag></tech>
 	<tech name="RelicHekatesTorches"><flag>TeamTech</flag></tech>
 	<tech name="RelicArchimedesLedger"><flag>TeamTech</flag></tech>
+	
+	<!-- Immortal Pillars DLC -->
+	<tech name="RelicFiveColoredStoneOfNuwa"><flag>TeamTech</flag></tech>
 	<tech name="RelicXirang"><flag>TeamTech</flag></tech>
 	<tech name="RelicJadeHare"><flag>TeamTech</flag></tech>
 	<tech name="RelicFeatherOfJingwei"><flag>TeamTech</flag></tech>
 	<tech name="RelicTuskOfDangkang"><flag>TeamTech</flag></tech>
+	<tech name="RelicTailOfFei"><flag>TeamTech</flag></tech>
 	<tech name="RelicFeatherOfBifang"><flag>TeamTech</flag></tech>
 	<tech name="RelicWuhaoBowOfHuangdi"><flag>TeamTech</flag></tech>
 	<tech name="RelicFurOfBoyi"><flag>TeamTech</flag></tech>
 	<tech name="RelicNineCauldrons"><flag>TeamTech</flag></tech>
 	<tech name="RelicOchreWhipOfShennong"><flag>TeamTech</flag></tech>
 	<tech name="RelicKuiDrum"><flag>TeamTech</flag></tech>
+
+	<!-- Heavenly Spear DLC -->
 	<tech name="RelicTailFeathersOfHeaven"><flag>TeamTech</flag></tech>
 	<tech name="RelicLittleCrowCircle"><flag>TeamTech</flag></tech>
 	<tech name="RelicHeavenlyJeweledSpear"><flag>TeamTech</flag></tech>
+	<tech name="RelicOkuninushisCovenant"><flag>TeamTech</flag></tech>
 	<tech name="RelicHoorisHuntingBow"><flag>TeamTech</flag></tech>
 	<tech name="RelicNineTailedFoxCharm"><flag>TeamTech</flag></tech>
 	<tech name="RelicGrassCuttingSword"><flag>TeamTech</flag></tech>
 	<tech name="RelicTawaraTodasLastArrow"><flag>TeamTech</flag></tech>
 	<tech name="RelicOgreBittenHelm"><flag>TeamTech</flag></tech>
 	<tech name="RelicDragonPalaceCrystal"><flag>TeamTech</flag></tech>
+
+	<!-- Obsidian Mirror DLC-->
+	<tech name="RelicDragonPalaceCrystal"><flag>TeamTech</flag></tech>	
+	<tech name="RelicXiuhcoatl"><flag>TeamTech</flag></tech>
+	<tech name="RelicEhecailacocozcatl"><flag>TeamTech</flag></tech>
+	<tech name="RelicMayahuelsMaguey"><flag>TeamTech</flag></tech>
+	<tech name="RelicBoneShardsOfMictlan"><flag>TeamTech</flag></tech>
+	<tech name="RelicHummingbirdsBeak"><flag>TeamTech</flag></tech>
+	<tech name="RelicAtlatlOfEhecatl"><flag>TeamTech</flag></tech>
+	<tech name="RelicXiuhcoatl"><flag>TeamTech</flag></tech>
+	<tech name="RelicGreatTzompantli"><flag>TeamTech</flag></tech>
 </techtreemods>
 

@@ -5,10 +5,8 @@
     <unit name="VillagerGreek">
         <sharedbuildlimitunit>VillagerGreek</sharedbuildlimitunit>
         <sharedbuildlimitunittypes>
-            <unittype>VillagerGreek</unittype>
             <unittype>VillagerDwarf</unittype>
 		</sharedbuildlimitunittypes>
-        <flag mergeMode="add">UseSharedBuildLimit</flag>
     </unit>
     <unit name="VillagerEgyptian">
         <sharedbuildlimitunit>VillagerEgyptian</sharedbuildlimitunit>
@@ -57,4 +55,12 @@
 		</sharedbuildlimitunittypes>
         <flag mergeMode="add">UseSharedBuildLimit</flag>
     </unit>
+    <!-- unit name="VillagerAztec">
+        <sharedbuildlimitunit>VillagerAztec</sharedbuildlimitunit>
+        <sharedbuildlimitunittypes>
+            <unittype>VillagerAztec</unittype>
+            <unittype>VillagerDwarf</unittype>
+		</sharedbuildlimitunittypes>
+        <flag mergeMode="add">UseSharedBuildLimit</flag>
+    </unit -->
 </protomods>

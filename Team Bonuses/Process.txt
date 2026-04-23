@@ -1,0 +1,15 @@
+How to convert a Major God bonus into a Team Bonus.
+----------------------------------------------------
+1. Create a new Team Bonus Tech, flagged as a TeamTech and as Volatile
+2. Add prerequisites of being the correct Major God and (as a workaround) having at least 1 villager alive so that the tech activates once the starting units are spawned.
+3. Add the effects and message to the tech.
+4. Remove the effect from the ArchaicAge tech for that specific God using mergeMode="remove".
+
+File Paths
+-----------
+CryBarEditor: C:\Program Files\CryBarEditor\
+
+data\Data.bar\strings\English\string_table.txt
+data\Data.bar\gameplay\techtree.xml.XMB
+data\Data.bar\gameplay\proto.xml.XMB
+ui\UIResources.bar\resources\
